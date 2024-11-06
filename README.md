@@ -20,7 +20,7 @@
     mamba create -n fastqc -y
     ```
 
-
+</details>
 
 ## Składanie Genomu Bakterii
 
