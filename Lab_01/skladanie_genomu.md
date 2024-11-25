@@ -28,6 +28,10 @@ conda config --add channels bioconda
 
 Dobrą praktyką (i bezpieczną) jest tworzenie osobnego środowiska do każdego narzędzia, ale nie jest to wymagane.
 
+```bash
+mamba activate NAZWA_SRODOWISKA
+```
+
 <details>
 <summary> Tworzenie nowego środowiska </summary>
 
@@ -77,6 +81,10 @@ mamba install bioconda::megahit
 mamba install bioconda::quast
 ```
 </details>
+
+```txt
+Quasta najlepiej dodac do nowego środowiska
+```
 
 <details>
 <summary>MultiQC</summary>
@@ -158,4 +166,33 @@ NanoPlot -t 5 --N50 --fastq filtered_nanopore.fastq -o postfilter_nanoplot
 </details>
 
 
+## Składanie genomu za pomocą SPADES
 
+
+<details>
+<summary>Spades</summary>
+  
+```bash
+spades.py -t 5 --cov-cutoff auto --pe1-1 PLIK_DO_ANALIZY_illumina_trimmed_1.fastq.gz --pe1-2 PLIK_DO_ANALIZY_illumina_trimmed_2.fastq.gz --nanopore PLIK_DO_ANALIZY_filtered_nanopore.fastq -o spades_assembly
+```
+</details>
+
+## Składanie genomu za pomocą MegaHit
+
+<details>
+<summary>MegaHit</summary>
+  
+```bash
+megahit -1 PLIK_DO_ANALIZY_illumina_trimmed_1.fastq.gz -2 PLIK_DO_ANALIZY_illumina_trimmed_2.fastq.gz -o megahit_output -t 5 -m 0.5
+```
+</details>
+
+## Porównanie wyników z Spadesa i MegaHita za pomocą Quasta
+
+<details>
+<summary>Quast</summary>
+  
+```bash
+quast ./spades_assembly/scaffolds.fasta ./megahit_output/final.contigs.fa -o quast_comparision
+```
+</details>
