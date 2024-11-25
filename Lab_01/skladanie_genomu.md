@@ -42,7 +42,7 @@ Instalacja potrzebnych narzędzi:
 <summary>FastQC</summary>
   
 ```bash
-mamba install bioconda:fastqc
+mamba install bioconda::fastqc
 ```
 </details>
 
@@ -50,7 +50,7 @@ mamba install bioconda:fastqc
 <summary>FastP</summary>
   
 ```bash
-mamba install bioconda:fastp
+mamba install bioconda::fastp
 ```
 </details>
 
@@ -58,7 +58,7 @@ mamba install bioconda:fastp
 <summary>spades</summary>
   
 ```bash
-mamba install bioconda:spades
+mamba install bioconda::spades
 ```
 </details>
 
@@ -66,7 +66,7 @@ mamba install bioconda:spades
 <summary>MegaHit</summary>
   
 ```bash
-mamba install bioconda:megahit
+mamba install bioconda::megahit
 ```
 </details>
 
@@ -74,7 +74,7 @@ mamba install bioconda:megahit
 <summary>Quast</summary>
   
 ```bash
-mamba install bioconda:quast
+mamba install bioconda::quast
 ```
 </details>
 
@@ -82,7 +82,7 @@ mamba install bioconda:quast
 <summary>MultiQC</summary>
   
 ```bash
-mamba install bioconda:multiqc
+mamba install bioconda::multiqc
 ```
 </details>
 
@@ -111,6 +111,17 @@ fastq-dump --gzip --skip-technical --readids --read-filter pass --dumpbase --spl
 ```txt
 Prościej może być jak ręczne pobierzemy danych i przerzucenie ich na serwer za pomocą WinSCP
 ```
+## Kontrola jakości Illuminy
+
+<details>
+<summary>FastP</summary>
+  
+```bash
+fastp -i PLIK_DO_ANALIZY_1.fastq.gz -I PLIK_DO_ANALIZY_2.fastq.gz -o output_1_trimmed.fastq.gz -O output_2_trimmed.fastq.gz --cut_front --cut_tail --cut_window_size 4 --cut_mean_quality 30 --length_required 50
+```
+</details>
+
+
 
 ## Kontrola jakości Nanopore
 
@@ -145,3 +156,6 @@ filtlong --min_mean_q 95 --min_length 1000 prefiltered_nanopore.fastq > filtered
 NanoPlot -t 5 --N50 --fastq filtered_nanopore.fastq -o postfilter_nanoplot
 ```
 </details>
+
+
+
