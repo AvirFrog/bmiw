@@ -102,6 +102,22 @@ mamba install bioconda::nanoplot
 ```
 </details>
 
+<details>
+<summary>Filtlong</summary>
+  
+```bash
+mamba install bioconda::filtlong
+```
+</details>
+
+<details>
+<summary>porechop</summary>
+  
+```bash
+mamba install bioconda::porechop
+```
+</details>
+
 
 ## Pobieranie danych
 
