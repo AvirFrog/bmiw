@@ -32,7 +32,7 @@ Dobrą praktyką (i bezpieczną) jest tworzenie osobnego środowiska do każdego
 <summary> Tworzenie nowego środowiska </summary>
 
 ```bash
-conda create -n env_name
+mamba create -n env_name
 ```
 </details>
 
@@ -85,6 +85,33 @@ mamba install bioconda:quast
 mamba install bioconda:multiqc
 ```
 </details>
+
+## Pobieranie danych
+
+Będziemy potrzebować jeszcze jednego narzędzia:
+
+<details>
+<summary>SRA tools</summary>
+  
+```bash
+mamba install bioconda::sra-tools
+```
+</details>
+
+Pobieramy dane: 
+
+<details>
+<summary>Jak pobrać dane?</summary>
+  
+```bash
+fastq-dump --gzip --skip-technical --readids --read-filter pass --dumpbase --split-3 --clip --outdir path/to/output/ ID_PROJEKTU
+```
+</details>
+
+```txt
+Prościej może być jak ręczne pobierzemy danych i przerzucenie ich na serwer za pomocą WinSCP
+```
+
 
 
 
