@@ -112,6 +112,36 @@ fastq-dump --gzip --skip-technical --readids --read-filter pass --dumpbase --spl
 Prościej może być jak ręczne pobierzemy danych i przerzucenie ich na serwer za pomocą WinSCP
 ```
 
+## Kontrola jakości Nanopore
 
+<details>
+<summary>NanoPlot</summary>
+  
+```bash
+NanoPlot -t 5 --N50 --fastq PLIK_DO_ANALIZY.fastq.gz -o prefilter_nanoplot
+```
+</details>
 
+<details>
+<summary>porechop</summary>
+  
+```bash
+porechop -t 5 -i PLIK_DO_ANALIZY.fastq.gz -o prefiltered_nanopore.fastq
+```
+</details>
 
+<details>
+<summary>Fitlong</summary>
+  
+```bash
+filtlong --min_mean_q 95 --min_length 1000 prefiltered_nanopore.fastq > filtered_nanopore.fastq
+```
+</details>
+
+<details>
+<summary>Nanoplot po filtracji</summary>
+  
+```bash
+NanoPlot -t 5 --N50 --fastq filtered_nanopore.fastq -o postfilter_nanoplot
+```
+</details>
