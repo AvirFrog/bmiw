@@ -94,6 +94,15 @@ mamba install bioconda::multiqc
 ```
 </details>
 
+<details>
+<summary>NanoPlot</summary>
+  
+```bash
+mamba install bioconda::nanoplot
+```
+</details>
+
+
 ## Pobieranie danych
 
 Będziemy potrzebować jeszcze jednego narzędzia:
