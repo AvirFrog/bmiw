@@ -65,8 +65,12 @@ lub https://usegalaxy.eu / https://usegalaxy.org / https://usegalaxy.org.au
 
 Bakta (nowoczesny zestaw do wystandaryzowanej adnotacji pozycji i funkcji genów u bakterii)
 ```bash
-bakta annotate --outdir bakta_output --prefix assembly assembly.fna
+mkdir results_bakta
 ```
+```bash
+bakta --db <db-path> --verbose --output results_bakta/ --prefix assembly --threads 3 WASZ_GENOM.fasta
+```
+
 lub https://usegalaxy.eu / https://usegalaxy.org / https://usegalaxy.org.au
 
 ## Porównanie wyników adnotacji uzyskanych różnymi metodami
