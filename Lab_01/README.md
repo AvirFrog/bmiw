@@ -1,6 +1,6 @@
 # Składanie Genomu
 
-Przeanalizuj i złóż [bibliotek z sekwencjonowania genomu Agreia sp. (bakteria)](https://www.ebi.ac.uk/ena/browser/view/PRJEB40363) a następnie porównaj złożenia, przeprowadź adnotacje genomu 2 metodami i porównaj ich wyniki. 
+Przeanalizuj i złóż [bibliotek z sekwencjonowania genomu Agreia sp. (bakteria)](https://www.ebi.ac.uk/ena/browser/view/PRJEB40363)
 
 ##  Instalacja Condy i Mamby
 
