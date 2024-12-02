@@ -199,18 +199,26 @@ quast ./spades_assembly/scaffolds.fasta ./megahit_output/final.contigs.fa -o qua
 ## Adnotacja funkcjonalna sekwencji
 
 <details>
-<summary>1</summary>
+<summary>Prokka (nieco starszy leczpowszechnie używany zestaw do adnotacji pozycji i funkcji genów)</summary>
   
 ```bash
-⏳⏳⏳
+conda install bioconda::prokka
+lub
+https://usegalaxy.eu
+https://usegalaxy.org
+https://usegalaxy.org.au
 ```
 </details>
 
 <details>
-<summary>2</summary>
+<summary>Bakta (nowoczesny zestaw do wystandaryzowanej adnotacji pozycji i funkcji genów u bakterii)</summary>
   
 ```bash
-⏳⏳⏳
+conda install bioconda::bakta
+lub
+https://usegalaxy.eu
+https://usegalaxy.org
+https://usegalaxy.org.au
 ```
 </details>
 
@@ -220,7 +228,7 @@ quast ./spades_assembly/scaffolds.fasta ./megahit_output/final.contigs.fa -o qua
 <summary>3</summary>
   
 ```bash
-⏳⏳⏳
+https://www.cbrc.kaust.edu.sa/BEACON
 ```
 </details>
 
