@@ -110,6 +110,26 @@ mamba install bioconda::quast
 Quasta najlepiej dodac do nowego środowiska
 ```
 
+<details>
+<summary>Prokka (nieco starszy leczpowszechnie używany zestaw do adnotacji pozycji i funkcji genów)</summary>
+  
+```bash
+mamba install bioconda::prokka
+prokka --setupdb
+lub (wykorzystaj istniejące instalacje na serwerach Galaxy podanych poniżej)
+```
+</details>
+
+<details>
+<summary>Bakta (nowoczesny zestaw do wystandaryzowanej adnotacji pozycji i funkcji genów u bakterii)</summary>
+  
+```bash
+mamba install bioconda::bakta
+bakta_db download --output bakta_db --type full
+lub (wykorzystaj istniejące instalacje na serwerach Galaxy podanych poniżej)
+```
+</details>
+
 
 ## Pobieranie danych
 ```txt
@@ -202,7 +222,7 @@ quast ./spades_assembly/scaffolds.fasta ./megahit_output/final.contigs.fa -o qua
 <summary>Prokka (nieco starszy leczpowszechnie używany zestaw do adnotacji pozycji i funkcji genów)</summary>
   
 ```bash
-conda install bioconda::prokka
+prokka --outdir prokka_output --prefix assembly --genus YourGenusName --kingdom Bacteria assembly.fna --addgenes
 lub
 https://usegalaxy.eu
 https://usegalaxy.org
@@ -214,7 +234,7 @@ https://usegalaxy.org.au
 <summary>Bakta (nowoczesny zestaw do wystandaryzowanej adnotacji pozycji i funkcji genów u bakterii)</summary>
   
 ```bash
-conda install bioconda::bakta
+bakta annotate --outdir bakta_output --prefix assembly assembly.fna
 lub
 https://usegalaxy.eu
 https://usegalaxy.org
@@ -225,7 +245,7 @@ https://usegalaxy.org.au
 ## Porównanie wyników adnotacji uzyskanych różnymi metodami
 
 <details>
-<summary>3</summary>
+<summary>BEACON (webserver do porównywania adnotacji W FORMACIE GENBANK)</summary>
   
 ```bash
 https://www.cbrc.kaust.edu.sa/BEACON
@@ -235,9 +255,9 @@ https://www.cbrc.kaust.edu.sa/BEACON
 ## Analiza wybranych rodzin genowych
 
 <details>
-<summary>4</summary>
+<summary>Bioython</summary>
   
 ```bash
-⏳⏳⏳
+Samodzielnie napisz skrypt który wyodrębni z genomu geny kodujące polimerazy RNA i DNA (np korzystając z biblioteki SeqIO pakietu biopython).
 ```
 </details>
