@@ -145,6 +145,13 @@ nohup [nasza_komenda] > output.log 2> &1 &
 - `2> &1` - jest to przekierowania standard error do pliku który podalismy wcześniej (alternatywnie możemy zrobić tak `> stdr_out.txt 2> stdr_err.txt` i wtedy standard output i error mamy w osobnych plikach)
 - `&` - końcowy ampersant jest niezbędny do uruchomienia polecenia nohup
 
+żeby sprawdzić czy nasz skrypt działa uzywamy komendy
+```bash
+jobs
+```
+Jeśli mamy `Running` to znaczy że nasze zadanie dalej jest w trakcie pracy, jeśli mamy `Done` znaczy ze zadanie sie wykonało a jeśli jest `Exit` lub `Terminated` to znaczy że coś poszło nie tak i należy sprawdzić nasz plik z outputem/z standard errorem
+
+
 ## Składanie genomu za pomocą SPADES i MegaHIT
 
 Spades
