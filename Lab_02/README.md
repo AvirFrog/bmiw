@@ -1,6 +1,6 @@
 # Adnotacja genomu bakterii
 
-Przeporwadzeniu adnotacji genomu dwoma metodami oraz porównanie wyników i wyszukanie genów o konkretnych funkcjach za pomocą własnego skryptu w **Pythonie**
+Przeporwadź adnotację genomu dwoma metodami oraz porównanaj wyniki i wyszukaj geny o konkretnych funkcjach za pomocą własnego skryptu w **Pythonie**
 
 ## Instalacja niezbędnych programów
 
