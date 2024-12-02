@@ -71,6 +71,8 @@ amrfinder_update --force_update --database bakta_db/db-light/amrfinderplus-db/
 bakta --db <db-path> --verbose --output results_bakta/ --prefix assembly --threads 3 WASZ_GENOM.fasta
 ```
 
+<db-path> dla wersji light to `/bakta_db/db-light` a dla wersji pełnej `/home/jbarylski/bakta_db/db`
+
 lub https://usegalaxy.org / https://annotation.usegalaxy.eu 
 `Konieczne jest wybranie genomu, i wersji bazy AMRFinderPlus`
 
