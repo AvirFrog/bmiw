@@ -1,5 +1,7 @@
 # Bioinformatyka Mikroorganizmów i Wirusów 🧬
 
+Zajęcia polegać będą na przeanalizowaniu i złożeniu [biblioteki z sekwencjonowania genomu Agreia sp. (bakteria)](https://www.ebi.ac.uk/ena/browser/view/PRJEB40363) (**Lab_01**), porównaniu złożeń oraz przeporwadzeniu adnotacji genomu dwoma metodami oraz porównanie wyników i wyszukanie genów o konkretnych funkcjach za pomocą własnego skryptu w **Pythonie** (**Lab_2**), identyfikacji taksonomicznej badanej bakterii oraz identyfikacja porfagów w obrębie genomu (**Lab_03**)
+
 Niżej znajdziesz tabelę w której link przeniesie Cię do odpowiedniego tematu
 
 | Nr Zajęć | Temat  | Link  |
