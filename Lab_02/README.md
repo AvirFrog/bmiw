@@ -29,7 +29,7 @@ Bakta (nowoczesny zestaw do wystandaryzowanej adnotacji pozycji i funkcji genów
 ```bash
 mamba install bioconda::bakta
 ```
-Zamiast pobierać kilkudziesięcio gigabajtową bazę danych można skorzystać z tej pobranej już na serwerze, która znajduje się w `/home/jbarylski/bakta_db/db`, lub pobrać wersję `light` (oczywiście nie będzie tak dobra jak pełna wersja bazy ale do ćwiczeń wystarczy) za pomocą poniższych komend:
+Zamiast pobierać kilkudziesięcio gigabajtową bazę danych można skorzystać z wersji `light` (oczywiście nie będzie tak dobra jak pełna wersja bazy ale do ćwiczeń wystarczy) za pomocą poniższych komend:
 
 ```bash
 mkdir bakta_db 
@@ -71,10 +71,8 @@ Bakta (nowoczesny zestaw do wystandaryzowanej adnotacji pozycji i funkcji genów
 amrfinder_update --force_update --database bakta_db/db-light/amrfinderplus-db/
 ```
 ```bash
-bakta --db <db-path> --verbose --output results_bakta/ --prefix assembly --threads 3 WASZ_GENOM.fasta
+bakta --db /bakta_db/db-light --verbose --output results_bakta/ --prefix assembly --threads 3 WASZ_GENOM.fasta
 ```
-
-<db-path> dla wersji light to `/bakta_db/db-light` a dla wersji pełnej `/home/jbarylski/bakta_db/db`
 
 lub https://usegalaxy.org / https://annotation.usegalaxy.eu 
 `Konieczne jest wybranie genomu, i wersji bazy AMRFinderPlus`
