@@ -29,8 +29,19 @@ Bakta (nowoczesny zestaw do wystandaryzowanej adnotacji pozycji i funkcji genów
 ```bash
 mamba install bioconda::bakta
 ```
+Zamiast pobierać kilkudziesięcio gigabajtową bazę danych można skorzystać z tej pobranej już na serwerze, która znajduje się w `jbarylski/data_bases`, lub pobrać wersję `light` (oczywiście nie będzie tak dobra jak pełna wersja bazy ale do ćwiczeń się przyda) za pomocą poniższych komend:
 
-Warto się zastanowić nad pobieraniem całej bazy danych, można też przekopiować ją z serwera z folderu `jbarylski/data_bases`
+```bash
+wget https://zenodo.org/record/10522951/files/db-light.tar.gz
+```
+```bash
+tar -xzf db-light.tar.gz
+```
+```bash
+rm db-light.tar.gz
+```
+
+Poniższa komenda jest poglądowa, nie uruchamiajcie jej na serwerze z dwóch powodów, pobieranie zajmię za duzo czasu, rozpakowana baza danych to ponad 70GB co spowoduje niepotrzebne zapchanie serwera
 ```bash
 bakta_db download --output bakta_db --type full
 ```
