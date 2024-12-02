@@ -7,7 +7,16 @@ Przeporwadzeniu adnotacji genomu dwoma metodami oraz porównanie wyników i wysz
 W razie problemów z programami Prokka lub Bakta można skorzystać z serwerów galaxy, na których znajdują się te narzędzia: https://usegalaxy.eu / https://usegalaxy.org / https://usegalaxy.org.au
 
 Prokka (nieco starszy leczpowszechnie używany zestaw do adnotacji pozycji i funkcji genów)
-  
+
+```bash
+mamba create -n prokka_blast
+```
+```bash
+mamba activate prokka_blast
+```
+```bash
+mamba install bioconda::blast=2.2.31
+```
 ```bash
 mamba install bioconda::prokka
 ```
