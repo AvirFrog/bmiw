@@ -65,6 +65,9 @@ lub https://usegalaxy.eu / https://usegalaxy.org / https://usegalaxy.org.au
 
 Bakta (nowoczesny zestaw do wystandaryzowanej adnotacji pozycji i funkcji genów u bakterii)
 ```bash
+amrfinder_update --force_update --database bakta_db/db-light/amrfinderplus-db/
+```
+```bash
 bakta --db <db-path> --verbose --output results_bakta/ --prefix assembly --threads 3 WASZ_GENOM.fasta
 ```
 
