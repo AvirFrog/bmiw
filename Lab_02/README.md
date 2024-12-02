@@ -32,6 +32,12 @@ mamba install bioconda::bakta
 Zamiast pobierać kilkudziesięcio gigabajtową bazę danych można skorzystać z tej pobranej już na serwerze, która znajduje się w `jbarylski/data_bases`, lub pobrać wersję `light` (oczywiście nie będzie tak dobra jak pełna wersja bazy ale do ćwiczeń wystarczy) za pomocą poniższych komend:
 
 ```bash
+mkdir bakta_db 
+```
+```bash
+cd bakta_db
+```
+```bash
 wget https://zenodo.org/record/10522951/files/db-light.tar.gz
 ```
 ```bash
