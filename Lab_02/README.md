@@ -4,7 +4,7 @@ Przeporwadź adnotację genomu dwoma metodami oraz porównanaj wyniki i wyszukaj
 
 ## Instalacja niezbędnych programów
 
-W razie problemów z programami Prokka lub Bakta można skorzystać z serwerów galaxy, na których znajdują się te narzędzia: https://usegalaxy.eu / https://usegalaxy.org / https://usegalaxy.org.au
+W razie problemów z programami Prokka lub Bakta można skorzystać z serwerów galaxy, na których znajdują się te narzędzia: https://usegalaxy.org / https://annotation.usegalaxy.eu
 
 Prokka (nieco starszy leczpowszechnie używany zestaw do adnotacji pozycji i funkcji genów)
 
@@ -61,7 +61,7 @@ Prokka (nieco starszy leczpowszechnie używany zestaw do adnotacji pozycji i fun
 ```bash
 prokka --outdir prokka_output --prefix assembly --genus YourGenusName --kingdom Bacteria assembly.fna --addgenes
 ```
-lub https://usegalaxy.eu / https://usegalaxy.org / https://usegalaxy.org.au
+lub https://usegalaxy.org / https://annotation.usegalaxy.eu 
 
 Bakta (nowoczesny zestaw do wystandaryzowanej adnotacji pozycji i funkcji genów u bakterii)
 ```bash
@@ -71,7 +71,9 @@ amrfinder_update --force_update --database bakta_db/db-light/amrfinderplus-db/
 bakta --db <db-path> --verbose --output results_bakta/ --prefix assembly --threads 3 WASZ_GENOM.fasta
 ```
 
-lub https://usegalaxy.eu / https://usegalaxy.org / https://usegalaxy.org.au
+lub https://usegalaxy.org / https://annotation.usegalaxy.eu 
+`Konieczne jest wybranie genomu, i wersji bazy AMRFinderPlus`
+
 
 ## Porównanie wyników adnotacji uzyskanych różnymi metodami
 
