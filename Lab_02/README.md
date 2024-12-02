@@ -52,7 +52,7 @@ cd ..
 
 Poniższa komenda jest poglądowa, nie uruchamiajcie jej na serwerze z dwóch powodów, pobieranie zajmię za duzo czasu, rozpakowana baza danych to ponad 70GB co spowoduje niepotrzebne zapchanie serwera
 ```bash
-bakta_db download --output bakta_db --type full
+$ bakta_db download --output bakta_db --type full #tego nie puszczać na serwerze
 ```
 
 --> `Bakta: jeżeli wykonujesz analizę na Galaxy w "Selection of the output files" trzeba zaznaczyć "Annotations and sequences in GenBank format"` <--
