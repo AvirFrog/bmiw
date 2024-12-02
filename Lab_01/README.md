@@ -3,9 +3,8 @@
 Przeanalizuj i złóż [bibliotek z sekwencjonowania genomu Agreia sp. (bakteria)](https://www.ebi.ac.uk/ena/browser/view/PRJEB40363) a następnie porównaj złożenia, przeprowadź adnotacje genomu 2 metodami i porównaj ich wyniki. 
 
 ##  Instalacja Condy i Mamby
-<details>
 
-<summary>Pobieranie miniforge</summary>
+Pobieranie miniforge
 
 ```bash
 wget https://github.com/conda-forge/miniforge/releases/download/24.9.2-0/Mambaforge-24.9.2-0-Linux-x86_64.sh
@@ -22,95 +21,69 @@ chmod +x Mambaforge-24.9.2-0-Linux-x86_64.sh
 ```bash
 conda config --add channels bioconda
 ```
-  
-</details>
 
+### Dobrą praktyką (i bezpieczną) jest tworzenie osobnego środowiska do każdego narzędzia, ale jest to wymagane tylko dla niektórych programów.
 
-## Instalacja niezbędnych programów
+Tworzenie witrualnego środowiska
+```bash
+mamba create -n env_name
+```
 
-Dobrą praktyką (i bezpieczną) jest tworzenie osobnego środowiska do każdego narzędzia, ale jest to wymagane tylko dla niektórych programów.
-
+Aktywowanie utworzonego wirtualnego środowiska
 ```bash
 mamba activate NAZWA_SRODOWISKA
 ```
 
-<details>
-<summary> Tworzenie nowego środowiska </summary>
-
+Sprawdzenie jakie środowiska są już utworzone
 ```bash
-mamba create -n env_name
+mamba env list
 ```
-</details>
 
-Instalacja potrzebnych narzędzi:
+## Instalacja niezbędnych programów
 
-<details>
-<summary>FastQC (narzędzie do kontroli jakości odczytów Illumina)</summary>
-  
+FastQC (narzędzie do kontroli jakości odczytów Illumina)
 ```bash
 mamba install bioconda::fastqc
 ```
-</details>
 
-<details>
-<summary>FastP (narzędzie do kontroli jakości, filtrowania i przycinania odczytów Illumina)</summary>
-  
+FastP (narzędzie do kontroli jakości, filtrowania i przycinania odczytów Illumina)
 ```bash
 mamba install bioconda::fastp
 ```
-</details>
 
-<details>
-<summary>NanoPlot (narzędzie do kontroli jakości odczytów NanoPore)</summary>
-  
+NanoPlot (narzędzie do kontroli jakości odczytów NanoPore)
 ```bash
 mamba install bioconda::nanoplot
 ```
-</details>
 
-<details>
-<summary>Porechop (narzędzie do usuwania adaptorów z NanoPore)</summary>
-  
+Porechop (narzędzie do usuwania adaptorów z NanoPore)
 ```bash
 mamba install bioconda::porechop
 ```
-</details>
 
-<details>
-<summary>Filtlong (narzędzie do filtrowania odczytów NanoPore)</summary>
-  
+Filtlong (narzędzie do filtrowania odczytów NanoPore)
 ```bash
 mamba install bioconda::filtlong
 ```
-</details>
 
-<details>
-<summary>spades (uniwersalny program do składania odzytów Illumina i bibliotek mieszanych - np. Illimina i Nanopore)</summary>
-  
+spades (uniwersalny program do składania odzytów Illumina i bibliotek mieszanych - np. Illimina i Nanopore)
 ```bash
 mamba install bioconda::spades
 ```
-</details>
 
-<details>
-<summary>MegaHit (program do składania odzytów Illumina)</summary>
-  
+MegaHit (program do składania odzytów Illumina)
 ```bash
 mamba install bioconda::megahit
 ```
-</details>
 
-<details>
-<summary>Quast (narzędzie do kontroli jakości złożenia)</summary>
-  
+Quast (narzędzie do kontroli jakości złożenia)
 ```bash
 mamba install bioconda::quast
 ```
-</details>
 
-```txt
-Quasta najlepiej dodac do nowego środowiska
-```
+
+--> `Quasta najlepiej dodac do nowego środowiska` <--
+
 
 <details>
 <summary>Prokka (nieco starszy leczpowszechnie używany zestaw do adnotacji pozycji i funkcji genów)</summary>
