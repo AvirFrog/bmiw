@@ -74,12 +74,6 @@ bakta --db <db-path> --verbose --output results_bakta/ --prefix assembly --threa
 lub https://usegalaxy.org / https://annotation.usegalaxy.eu 
 `Konieczne jest wybranie genomu, i wersji bazy AMRFinderPlus`
 
+## Porównanie wyników adnotacji uzyskanych różnymi metodami i analiza wybranych rodzin genowych
 
-## Porównanie wyników adnotacji uzyskanych różnymi metodami
-
-[BEACON](https://www.cbrc.kaust.edu.sa/BEACON) (webserver do porównywania adnotacji W FORMACIE GENBANK)
-
-
-## Analiza wybranych rodzin genowych
-
-Samodzielnie napisz skrypt, który wyodrębni z genomu geny kodujące polimerazy RNA i DNA (np korzystając z biblioteki SeqIO pakietu biopython).
+Samodzielnie napisz skrypt, który porównuje ilość i średnią długość genów w obu adnotacjach i wyodrębni z genomu geny kodujące polimerazy RNA i DNA (np korzystając z biblioteki SeqIO pakietu biopython).
