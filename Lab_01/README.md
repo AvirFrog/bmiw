@@ -21,8 +21,9 @@ chmod +x Mambaforge-24.9.2-0-Linux-x86_64.sh
 ```bash
 conda config --add channels bioconda
 ```
+## Tworzenie wirtualnych środowisk
 
-### Dobrą praktyką (i bezpieczną) jest tworzenie osobnego środowiska do każdego narzędzia, ale jest to wymagane tylko dla niektórych programów.
+--> `Dobrą praktyką (i bezpieczną) jest tworzenie osobnego środowiska do każdego narzędzia, ale jest to wymagane tylko dla niektórych programów.` <--
 
 Tworzenie witrualnego środowiska
 ```bash
@@ -84,143 +85,79 @@ mamba install bioconda::quast
 
 --> `Quasta najlepiej dodac do nowego środowiska` <--
 
-
-<details>
-<summary>Prokka (nieco starszy leczpowszechnie używany zestaw do adnotacji pozycji i funkcji genów)</summary>
-  
-```bash
-mamba install bioconda::prokka
-prokka --setupdb
-lub (wykorzystaj istniejące instalacje na serwerach Galaxy podanych poniżej)
-```
-</details>
-
-<details>
-<summary>Bakta (nowoczesny zestaw do wystandaryzowanej adnotacji pozycji i funkcji genów u bakterii)</summary>
-  
-```bash
-mamba install bioconda::bakta
-bakta_db download --output bakta_db --type full
-lub (wykorzystaj istniejące instalacje na serwerach Galaxy podanych poniżej)
-```
-</details>
-
-
 ## Pobieranie danych
-```txt
-Prościej może być jak ręczne pobierzemy danych i przerzucenie ich na serwer za pomocą WinSCP
+
+[biblioteka z sekwencjonowania genomu Agreia sp. (bakteria)](https://www.ebi.ac.uk/ena/browser/view/PRJEB40363)
+
+Prościej może być jak ręczne pobierzemy danych i przerzucimy je na serwer za pomocą WinSCP
+
+lub jeśli ktoś chce używać SCP w linuxie to przyda się ta komenda:
+
+```bash
+scp *.fastq.gz {myuser}@IP_SERWERA_PODANE_NA_TEAMS:/path/to/dir
 ```
-## Kontrola jakości Illuminy
 
+## Kontrola jakości Illuminy i trimmowanie
 
-
-<details>
-<summary>FastP</summary>
-  
+FastP  
 ```bash
 fastp -i PLIK_DO_ANALIZY_1.fastq.gz -I PLIK_DO_ANALIZY_2.fastq.gz -o output_1_trimmed.fastq.gz -O output_2_trimmed.fastq.gz --cut_front --cut_tail --cut_window_size 4 --cut_mean_quality 30 --length_required 50
 ```
-</details>
-
-
 
 ## Kontrola jakości Nanopore
 
-<details>
-<summary>NanoPlot</summary>
+NanoPlot
   
 ```bash
 NanoPlot -t 5 --N50 --fastq PLIK_DO_ANALIZY.fastq.gz -o prefilter_nanoplot
 ```
-</details>
 
-<details>
-<summary>porechop</summary>
-  
+porechop
 ```bash
 porechop -t 5 -i PLIK_DO_ANALIZY.fastq.gz -o prefiltered_nanopore.fastq
 ```
-</details>
 
-<details>
-<summary>Fitlong</summary>
-  
+Fitlong
 ```bash
 filtlong --min_mean_q 90 --min_length 1000 prefiltered_nanopore.fastq > filtered_nanopore.fastq
 ```
-</details>
 
-<details>
-<summary>Nanoplot po filtracji</summary>
-  
+Nanoplot po filtracji
 ```bash
 NanoPlot -t 5 --N50 --fastq filtered_nanopore.fastq -o postfilter_nanoplot
 ```
-</details>
 
+## Używanie nohup
 
-## Składanie genomu za pomocą SPADES
+Czasami zdazy się taka sytacja że będziemy chcieli coś puścić w tle (np. składanie genomu, ponieważ trochę czasu to zajmuje a zajęcia zbliżają się ku końcowi), możemy wykorzystać dwa narzedzia `screen` oraz `nohup`, w tym przypadku `nohup` wydaje się być prostszy do wytłumaczenia i zastosowania.
 
+Poniżej jak wyglada przykładowa komenda `nohup`
 
-<details>
-<summary>Spades</summary>
-  
+```bash
+nohup [nasza_komenda] > output.log 2> &1 &
+```
+
+- `nohup` - komenda za pomocą, której uruchomimy coś w tle
+- `[nasza_komenda]` - tu wklejamy nasze polecenie, które chcemy wykonać
+- `> output.log` - możemy nazwać output jak chcemy, jest  to przekierowanie informacji z standard outputu do pliku
+- `2> &1` - jest to przekierowania standard error do pliku który podalismy wcześniej (alternatywnie możemy zrobić tak > stdr_out.txt 2> stdr_err.txt i wtedy standard output i error mamy w osobnych plikach)
+- `&` - końcowy ampersant jest niezbędny do uruchomienia polecenia nohup
+
+## Składanie genomu za pomocą SPADES i MegaHIT
+
+Spades
 ```bash
 spades.py -t 5 --cov-cutoff auto --pe1-1 PLIK_DO_ANALIZY_illumina_trimmed_1.fastq.gz --pe1-2 PLIK_DO_ANALIZY_illumina_trimmed_2.fastq.gz --nanopore PLIK_DO_ANALIZY_filtered_nanopore.fastq -o spades_assembly
 ```
-</details>
 
-## Składanie genomu za pomocą MegaHit
-
-<details>
-<summary>MegaHit</summary>
-  
+MegaHit
 ```bash
 megahit -1 PLIK_DO_ANALIZY_illumina_trimmed_1.fastq.gz -2 PLIK_DO_ANALIZY_illumina_trimmed_2.fastq.gz -o megahit_output -t 5 -m 0.5
 ```
-</details>
 
 ## Porównanie wyników z Spadesa i MegaHita za pomocą Quasta
 
-<details>
-<summary>Quast</summary>
-  
+Quast
 ```bash
 quast ./spades_assembly/scaffolds.fasta ./megahit_output/final.contigs.fa -o quast_comparision
 ```
-</details>
-
-
-## Adnotacja funkcjonalna sekwencji
-
-<details>
-<summary>Prokka (nieco starszy leczpowszechnie używany zestaw do adnotacji pozycji i funkcji genów)</summary>
-  
-```bash
-prokka --outdir prokka_output --prefix assembly --genus YourGenusName --kingdom Bacteria assembly.fna --addgenes
-```
-lub https://usegalaxy.eu / https://usegalaxy.org / https://usegalaxy.org.au
-</details>
-
-<details>
-<summary>Bakta (nowoczesny zestaw do wystandaryzowanej adnotacji pozycji i funkcji genów u bakterii)</summary>
-  
-```bash
-bakta annotate --outdir bakta_output --prefix assembly assembly.fna
-```
-lub https://usegalaxy.eu / https://usegalaxy.org / https://usegalaxy.org.au
-</details>
-
-## Porównanie wyników adnotacji uzyskanych różnymi metodami
-
-<details>
-<summary>BEACON (webserver do porównywania adnotacji W FORMACIE GENBANK)</summary>
-https://www.cbrc.kaust.edu.sa/BEACON
-</details>
-
-## Analiza wybranych rodzin genowych
-
-<details>
-<summary>Bioython</summary>
-Samodzielnie napisz skrypt, który wyodrębni z genomu geny kodujące polimerazy RNA i DNA (np korzystając z biblioteki SeqIO pakietu biopython).
-</details>
