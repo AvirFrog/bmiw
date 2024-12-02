@@ -46,6 +46,9 @@ tar -xzf db-light.tar.gz
 ```bash
 rm db-light.tar.gz
 ```
+```bash
+cd ..
+```
 
 Poniższa komenda jest poglądowa, nie uruchamiajcie jej na serwerze z dwóch powodów, pobieranie zajmię za duzo czasu, rozpakowana baza danych to ponad 70GB co spowoduje niepotrzebne zapchanie serwera
 ```bash
