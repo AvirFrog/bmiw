@@ -26,7 +26,7 @@ conda config --add channels bioconda
 
 ## Instalacja niezbędnych programów
 
-Dobrą praktyką (i bezpieczną) jest tworzenie osobnego środowiska do każdego narzędzia, ale nie jest to wymagane.
+Dobrą praktyką (i bezpieczną) jest tworzenie osobnego środowiska do każdego narzędzia, ale jest to wymagane tylko dla niektórych programów.
 
 ```bash
 mamba activate NAZWA_SRODOWISKA
@@ -43,7 +43,7 @@ mamba create -n env_name
 Instalacja potrzebnych narzędzi:
 
 <details>
-<summary>FastQC</summary>
+<summary>FastQC (narzędzie do kontroli jakości odczytów Illumina)</summary>
   
 ```bash
 mamba install bioconda::fastqc
@@ -51,7 +51,7 @@ mamba install bioconda::fastqc
 </details>
 
 <details>
-<summary>FastP</summary>
+<summary>FastP (narzędzie do kontroli jakości, filtrowania i przycinania odczytów Illumina)</summary>
   
 ```bash
 mamba install bioconda::fastp
@@ -59,7 +59,31 @@ mamba install bioconda::fastp
 </details>
 
 <details>
-<summary>spades</summary>
+<summary>NanoPlot (narzędzie do kontroli jakości odczytów NanoPore)</summary>
+  
+```bash
+mamba install bioconda::nanoplot
+```
+</details>
+
+<details>
+<summary>Porechop (narzędzie do usuwania adaptorów z NanoPore)</summary>
+  
+```bash
+mamba install bioconda::porechop
+```
+</details>
+
+<details>
+<summary>Filtlong (narzędzie do filtrowania odczytów NanoPore)</summary>
+  
+```bash
+mamba install bioconda::filtlong
+```
+</details>
+
+<details>
+<summary>spades (uniwersalny program do składania odzytów Illumina i bibliotek mieszanych - np. Illimina i Nanopore)</summary>
   
 ```bash
 mamba install bioconda::spades
@@ -67,7 +91,7 @@ mamba install bioconda::spades
 </details>
 
 <details>
-<summary>MegaHit</summary>
+<summary>MegaHit (program do składania odzytów Illumina)</summary>
   
 ```bash
 mamba install bioconda::megahit
@@ -75,7 +99,7 @@ mamba install bioconda::megahit
 </details>
 
 <details>
-<summary>Quast</summary>
+<summary>Quast (narzędzie do kontroli jakości złożenia)</summary>
   
 ```bash
 mamba install bioconda::quast
@@ -86,65 +110,14 @@ mamba install bioconda::quast
 Quasta najlepiej dodac do nowego środowiska
 ```
 
-<details>
-<summary>MultiQC</summary>
-  
-```bash
-mamba install bioconda::multiqc
-```
-</details>
-
-<details>
-<summary>NanoPlot</summary>
-  
-```bash
-mamba install bioconda::nanoplot
-```
-</details>
-
-<details>
-<summary>Filtlong</summary>
-  
-```bash
-mamba install bioconda::filtlong
-```
-</details>
-
-<details>
-<summary>porechop</summary>
-  
-```bash
-mamba install bioconda::porechop
-```
-</details>
-
 
 ## Pobieranie danych
-
-Będziemy potrzebować jeszcze jednego narzędzia:
-
-<details>
-<summary>SRA tools</summary>
-  
-```bash
-mamba install bioconda::sra-tools
-```
-</details>
-
-Pobieramy dane: 
-
-<details>
-<summary>Jak pobrać dane?</summary>
-  
-```bash
-fastq-dump --gzip --skip-technical --readids --read-filter pass --dumpbase --split-3 --clip --outdir path/to/output/ ID_PROJEKTU
-```
-</details>
-
 ```txt
 Prościej może być jak ręczne pobierzemy danych i przerzucenie ich na serwer za pomocą WinSCP
 ```
 ## Kontrola jakości Illuminy
+
+
 
 <details>
 <summary>FastP</summary>
