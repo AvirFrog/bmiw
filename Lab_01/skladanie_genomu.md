@@ -194,3 +194,42 @@ megahit -1 PLIK_DO_ANALIZY_illumina_trimmed_1.fastq.gz -2 PLIK_DO_ANALIZY_illumi
 quast ./spades_assembly/scaffolds.fasta ./megahit_output/final.contigs.fa -o quast_comparision
 ```
 </details>
+
+
+## Adnotacja funkcjonalna sekwencji
+
+<details>
+<summary>1</summary>
+  
+```bash
+⏳⏳⏳
+```
+</details>
+
+<details>
+<summary>2</summary>
+  
+```bash
+⏳⏳⏳
+```
+</details>
+
+## Porównanie wyników adnotacji uzyskanych różnymi metodami
+
+<details>
+<summary>3</summary>
+  
+```bash
+⏳⏳⏳
+```
+</details>
+
+## Analiza wybranych rodzin genowych
+
+<details>
+<summary>4</summary>
+  
+```bash
+⏳⏳⏳
+```
+</details>
