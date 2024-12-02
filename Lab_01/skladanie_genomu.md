@@ -225,11 +225,8 @@ quast ./spades_assembly/scaffolds.fasta ./megahit_output/final.contigs.fa -o qua
   
 ```bash
 prokka --outdir prokka_output --prefix assembly --genus YourGenusName --kingdom Bacteria assembly.fna --addgenes
-lub
-https://usegalaxy.eu
-https://usegalaxy.org
-https://usegalaxy.org.au
 ```
+lub https://usegalaxy.eu / https://usegalaxy.org / https://usegalaxy.org.au
 </details>
 
 <details>
@@ -237,29 +234,20 @@ https://usegalaxy.org.au
   
 ```bash
 bakta annotate --outdir bakta_output --prefix assembly assembly.fna
-lub
-https://usegalaxy.eu
-https://usegalaxy.org
-https://usegalaxy.org.au
 ```
+lub https://usegalaxy.eu / https://usegalaxy.org / https://usegalaxy.org.au
 </details>
 
 ## Porównanie wyników adnotacji uzyskanych różnymi metodami
 
 <details>
 <summary>BEACON (webserver do porównywania adnotacji W FORMACIE GENBANK)</summary>
-  
-```bash
 https://www.cbrc.kaust.edu.sa/BEACON
-```
 </details>
 
 ## Analiza wybranych rodzin genowych
 
 <details>
 <summary>Bioython</summary>
-  
-```bash
-Samodzielnie napisz skrypt który wyodrębni z genomu geny kodujące polimerazy RNA i DNA (np korzystając z biblioteki SeqIO pakietu biopython).
-```
+Samodzielnie napisz skrypt, który wyodrębni z genomu geny kodujące polimerazy RNA i DNA (np korzystając z biblioteki SeqIO pakietu biopython).
 </details>
