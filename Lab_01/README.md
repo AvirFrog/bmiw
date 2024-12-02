@@ -140,7 +140,7 @@ nohup [nasza_komenda] > output.log 2> &1 &
 - `nohup` - komenda za pomocą, której uruchomimy coś w tle
 - `[nasza_komenda]` - tu wklejamy nasze polecenie, które chcemy wykonać
 - `> output.log` - możemy nazwać output jak chcemy, jest  to przekierowanie informacji z standard outputu do pliku
-- `2> &1` - jest to przekierowania standard error do pliku który podalismy wcześniej (alternatywnie możemy zrobić tak > stdr_out.txt 2> stdr_err.txt i wtedy standard output i error mamy w osobnych plikach)
+- `2> &1` - jest to przekierowania standard error do pliku który podalismy wcześniej (alternatywnie możemy zrobić tak `> stdr_out.txt 2> stdr_err.txt` i wtedy standard output i error mamy w osobnych plikach)
 - `&` - końcowy ampersant jest niezbędny do uruchomienia polecenia nohup
 
 ## Składanie genomu za pomocą SPADES i MegaHIT
