@@ -119,7 +119,7 @@ porechop
 porechop -t 5 -i PLIK_DO_ANALIZY.fastq.gz -o prefiltered_nanopore.fastq
 ```
 
-Fitlong
+Filtlong
 ```bash
 filtlong --min_mean_q 90 --min_length 1000 prefiltered_nanopore.fastq > filtered_nanopore.fastq
 ```
