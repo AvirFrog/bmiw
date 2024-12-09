@@ -92,8 +92,19 @@ Będziemy potrzebować pliku w formacie `GenBank`, znajdziesz go w folderze z pl
 PhiSpy.py TWÓJ_PLIK_GENBANK -o NAZWA_KATALOGU_WYJSCIOWEGO --threads 3 --output_choice 7
 ```
 
-### MegaBlast
+### Blastn/tblastx
+
+[BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi)
+
+Wybieramy `Nucleotide BLAST`
+
+`blastn`
 
 - W sekcji: `Enter Query Sequence` dodaj plik `phages.fasta` z programu `PhiSpy`
 - W sekcji: `Choose Search Set`: `Database` -> `refseq_genomes`, `Organism` -> `Viruses (taxid: 10239)`
 - W sekcji: `Program Selection` wybieramy `blastn`
+
+`tblastx`
+
+- W sekcji: `Enter Query Sequence` dodaj plik `phages.fasta` z programu `PhiSpy`, `Genetic code` -> `Bacteria and Archea`
+- W sekcji: `Choose Search Set`: `Database` -> `refseq_genomes`, `Organism` -> `Viruses (taxid: 10239)`
