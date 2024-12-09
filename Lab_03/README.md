@@ -5,8 +5,20 @@ Wersja testowa zajęć, jeśli to czytasz, to radzę poczekać na oficjalną wer
 ## Instalacja niezbędnych programów
 
 GTDB-TK
+```bash
+mamba create -n gtdb-tk
+```
+```bash
+mamba activate gtdb-tk
+```
+```bash
+mamba install bioconda::gtdbtk
+```
+```bash
+mamba env config vars set GTDBTK_DATA_PATH="/home/jbarylski/mambaforge/envs/gtdb-tk/share/gtdbtk-2.4.0/db";
+```
 
-Tutaj info o podłaczeniu bazy danych
+`GTDBTK_DATA_PATH /home/jbarylski/mambaforge/envs/gtdb-tk/share/gtdbtk-2.4.0/db`
 
 PhiSpy
 
