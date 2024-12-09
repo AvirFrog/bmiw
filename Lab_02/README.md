@@ -88,3 +88,4 @@ lub https://usegalaxy.org / https://annotation.usegalaxy.eu
 ## Porównanie wyników adnotacji uzyskanych różnymi metodami i analiza wybranych rodzin genowych
 
 Samodzielnie napisz skrypt, który porównuje ilość i średnią długość genów w obu adnotacjach i wyodrębni z genomu geny kodujące polimerazy RNA i DNA (np korzystając z biblioteki SeqIO pakietu biopython).
+Porównujemy pliki `.gbff` z `bakta` i `.gbk` z `prokka`.
