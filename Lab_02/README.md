@@ -25,10 +25,18 @@ prokka --setupdb
 ```
 
 Bakta (nowoczesny zestaw do wystandaryzowanej adnotacji pozycji i funkcji genów u bakterii)
-  
+```bash
+mamba create -n bakta
+```
+
+```bakta
+mamba activate bakta
+```
+
 ```bash
 mamba install bioconda::bakta
 ```
+
 Zamiast pobierać kilkudziesięcio gigabajtową bazę danych można skorzystać z wersji `light` (oczywiście nie będzie tak dobra jak pełna wersja bazy ale do ćwiczeń wystarczy) za pomocą poniższych komend:
 
 ```bash
