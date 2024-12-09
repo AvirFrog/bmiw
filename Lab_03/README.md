@@ -74,7 +74,13 @@ gtdbtk classify --extension fasta --genome_dir SCIEZKA_DO_GENOMU --align_dir ali
 
 Anti-Smash
 
-https://antismash.secondarymetabolites.org/#!/start
+Narzedzie do analizy klastrów biosyntezy metabolitów wtórnych (użyteczne przy poszukiwaniu genów dla biotechnologi - bioprospectingu)
+
+Plikiem wjeściowym będzie plik `.gbff` z programu `bakta`
+
+W sekscji `Extra features` zaznacz wszystko :)
+
+[Anti-SMASH](https://antismash.secondarymetabolites.org/#!/start)
 
 PhiSpy
 
