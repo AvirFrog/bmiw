@@ -57,7 +57,7 @@ mkdir genomes/
 ```
 
 ```bash
-cp GENOM_ZESPADESA genomes/
+cp ŚCIEŻKA_DO_TWOJEGO_GENOMU_ZE_SPADESA genomes/
 ```
 
 ```bash
