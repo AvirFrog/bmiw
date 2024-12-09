@@ -78,7 +78,7 @@ Narzedzie do analizy klastrów biosyntezy metabolitów wtórnych (użyteczne prz
 
 Plikiem wjeściowym będzie plik `.gbff` z programu `bakta`
 
-W sekscji `Extra features` zaznacz wszystko :)
+W sekcji `Extra features` zaznacz wszystko :)
 
 Podaj swojego maila (w Anti-SMASH) żeby nie "zgubić" wyników
 
