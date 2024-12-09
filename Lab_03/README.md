@@ -4,7 +4,7 @@ Wersja testowa zajęć, jeśli to czytasz, to radzę poczekać na oficjalną wer
 
 ## Instalacja niezbędnych programów
 
-GTDB-TK
+### GTDB-TK
 ```bash
 mamba create -n gtdb-tk
 ```
@@ -36,7 +36,7 @@ mamba deactivate
 mamba activate gtdb-tk
 ```
 
-PhiSpy
+### PhiSpy
 
 ```bash
 mamba create -n phispy
@@ -50,7 +50,7 @@ mamba install -c bioconda phispy
 
 ## Identyfikacja profagów i Analiza filogenetyczna
 
-GTDB-TK
+### GTDB-TK
 
 ```bash
 mkdir genomes/
@@ -72,7 +72,7 @@ gtdbtk align --identify_dir identyfy_out --out_dir align_out
 gtdbtk classify --extension fasta --genome_dir SCIEZKA_DO_GENOMU --align_dir align_out --out_dir classify_out --skip_ani_screen --cpus 3
 ```
 
-Anti-Smash
+### Anti-Smash
 
 Narzedzie do analizy klastrów biosyntezy metabolitów wtórnych (użyteczne przy poszukiwaniu genów dla biotechnologi - bioprospectingu)
 
@@ -80,9 +80,11 @@ Plikiem wjeściowym będzie plik `.gbff` z programu `bakta`
 
 W sekscji `Extra features` zaznacz wszystko :)
 
+Podaj swojego maila (w Anti-SMASH) żeby nie "zgubić" wyników
+
 [Anti-SMASH](https://antismash.secondarymetabolites.org/#!/start)
 
-PhiSpy
+### PhiSpy
 
 Będziemy potrzebować pliku w formacie `GenBank`, znajdziesz go w folderze z plikami wyjściowymi z programu `bakta` z rozszerzeniem `.gbff`
 
