@@ -62,7 +62,7 @@ $ bakta_db download --output bakta_db --type full #tego nie puszczać na serwerz
 
 Prokka (nieco starszy leczpowszechnie używany zestaw do adnotacji pozycji i funkcji genów)
 ```bash
-prokka --outdir prokka_output --prefix assembly --genus YourGenusName --kingdom Bacteria assembly.fna --addgenes
+prokka --outdir prokka_output --prefix assembly --genus NAZWA_BAKTERII --kingdom Bacteria PLIK_FASTA_ZE_ZŁOZENIA --addgenes
 ```
 lub https://usegalaxy.org / https://annotation.usegalaxy.eu 
 
