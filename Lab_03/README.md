@@ -6,7 +6,21 @@ Wersja testowa zajęć, jeśli to czytasz, to radzę poczekać na oficjalną wer
 
 GTDB-TK
 
-XXX
+```bash
+gtdbtk identify --genome_dir genomes --out_dir indentify_out --cpus 4
+```
+
+```bash
+gtdbtk align --identify_dir indentify_out --out_dir align_out
+```
+
+```bash
+gtdbtk classify --extension fasta --genome_dir genomes --align_dir align_out --out_dir classify_out --
+```
+
+```bash
+skip_ani_screen --cpus 10
+```
 
 PhiSpy
 
