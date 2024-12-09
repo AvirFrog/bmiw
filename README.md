@@ -8,6 +8,6 @@ Niżej znajdziesz tabelę w której link przeniesie Cię do odpowiedniego tematu
 |:---:|:---:|:---:|
 | 01. | Składanie genomu bakterii | [Lab_01](https://github.com/AvirFrog/bmiw/blob/main/Lab_01/README.md) |
 | 02. | Adnotacja genomu bakterii | [Lab_02](https://github.com/AvirFrog/bmiw/blob/main/Lab_02/README.md) |
-| 03. | Analiza filogenetyczna i identyfikacja profagów | [Lab_03](https://github.com/AvirFrog/bmiw/blob/main/Lab_03/README.md) |
+| 03. | Analiza taksonomiczna, identyfikacja profagów, bioprospecting | [Lab_03](https://github.com/AvirFrog/bmiw/blob/main/Lab_03/README.md) |
 
 Jeśli masz pytanie (po za zajęciami) to polecam kontkatować się przez maila kacper.dudczak@amu.edu.pl lub teams
