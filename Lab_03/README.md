@@ -14,11 +14,20 @@ mamba activate gtdb-tk
 ```bash
 mamba install bioconda::gtdbtk
 ```
+Baza danych sciągała się ponad 2 dni dlatego skorzystamy z tej pobranej
 ```bash
 mamba env config vars set GTDBTK_DATA_PATH="/home/jbarylski/mambaforge/envs/gtdb-tk/share/gtdbtk-2.4.0/db";
 ```
 
 `GTDBTK_DATA_PATH /home/jbarylski/mambaforge/envs/gtdb-tk/share/gtdbtk-2.4.0/db`
+
+Teraz musimy zrestartować środowisko
+```bash
+mamba deactivate
+```
+```bash
+mamba activate gtdb-tk
+```
 
 PhiSpy
 
