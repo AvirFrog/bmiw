@@ -1,6 +1,6 @@
-# Analiza filogenetyczna i identyfikacja profagów
+# Analiza taksonomiczna, identyfikacja profagów, bioprospecting
 
-Wersja testowa zajęć, jeśli to czytasz, to radzę poczekać na oficjalną wersję, która dostepna będzie w poniedziałek
+Zidentyfikuj do jakich taksonów(gantunku/rodzaju/rodziny) należy analizowana przez Ciebie bakteria, zidentyfikuj występujące w niej profagi i klastry genów pozwalające na syntezę metabolitów wtórnych. 
 
 ## Instalacja niezbędnych programów
 
@@ -48,7 +48,7 @@ mamba activate phispy
 mamba install -c bioconda phispy
 ```
 
-## Identyfikacja profagów i Analiza filogenetyczna
+## Identyfikacja profagów i Analiza taksonomiczna
 
 ### GTDB-TK
 
