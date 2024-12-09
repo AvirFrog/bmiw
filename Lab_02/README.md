@@ -79,7 +79,7 @@ Bakta (nowoczesny zestaw do wystandaryzowanej adnotacji pozycji i funkcji genów
 amrfinder_update --force_update --database bakta_db/db-light/amrfinderplus-db/
 ```
 ```bash
-bakta --db /bakta_db/db-light --verbose --output results_bakta/ --prefix assembly --threads 3 WASZ_GENOM.fasta
+bakta --db bakta_db/db-light --verbose --output results_bakta/ --prefix assembly --threads 3 WASZ_GENOM.fasta
 ```
 
 lub https://usegalaxy.org / https://annotation.usegalaxy.eu 
