@@ -6,17 +6,7 @@ Wersja testowa zajęć, jeśli to czytasz, to radzę poczekać na oficjalną wer
 
 GTDB-TK
 
-```bash
-gtdbtk identify --genome_dir SCIEZKA_DO_GENOMU --out_dir identyfy_out --cpus 4
-```
-
-```bash
-gtdbtk align --identify_dir identyfy_out --out_dir align_out
-```
-
-```bash
-gtdbtk classify --extension fasta --genome_dir SCIEZKA_DO_GENOMU --align_dir align_out --out_dir classify_out --skip_ani_screen --cpus 4
-```
+Tutaj info o podłaczeniu bazy danych
 
 PhiSpy
 
@@ -34,7 +24,17 @@ mamba install -c bioconda phispy
 
 GTDB-TK
 
-XXX
+```bash
+gtdbtk identify --genome_dir SCIEZKA_DO_GENOMU --out_dir identyfy_out --cpus 4
+```
+
+```bash
+gtdbtk align --identify_dir identyfy_out --out_dir align_out
+```
+
+```bash
+gtdbtk classify --extension fasta --genome_dir SCIEZKA_DO_GENOMU --align_dir align_out --out_dir classify_out --skip_ani_screen --cpus 4
+```
 
 Anti-Smash
 
