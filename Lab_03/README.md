@@ -15,6 +15,13 @@ mamba activate gtdb-tk
 mamba install bioconda::gtdbtk
 ```
 Baza danych sciągała się ponad 2 dni dlatego skorzystamy z tej pobranej
+
+UWAGA! TEJ KOMENDY NIE WYKONUJEMY 
+```bash
+$ download-db.sh #NIE URUCHAMIAĆ!
+```
+Ustawianie ścieżki do pobranej wcześniej bazy danych
+
 ```bash
 mamba env config vars set GTDBTK_DATA_PATH="/home/jbarylski/mambaforge/envs/gtdb-tk/share/gtdbtk-2.4.0/db";
 ```
