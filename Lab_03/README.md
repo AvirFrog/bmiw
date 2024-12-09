@@ -7,19 +7,15 @@ Wersja testowa zajęć, jeśli to czytasz, to radzę poczekać na oficjalną wer
 GTDB-TK
 
 ```bash
-gtdbtk identify --genome_dir genomes --out_dir indentify_out --cpus 4
+gtdbtk identify --genome_dir SCIEZKA_DO_GENOMU --out_dir identyfy_out --cpus 4
 ```
 
 ```bash
-gtdbtk align --identify_dir indentify_out --out_dir align_out
+gtdbtk align --identify_dir identyfy_out --out_dir align_out
 ```
 
 ```bash
-gtdbtk classify --extension fasta --genome_dir genomes --align_dir align_out --out_dir classify_out --
-```
-
-```bash
-skip_ani_screen --cpus 10
+gtdbtk classify --extension fasta --genome_dir SCIEZKA_DO_GENOMU --align_dir align_out --out_dir classify_out --skip_ani_screen --cpus 4
 ```
 
 PhiSpy
@@ -34,11 +30,15 @@ mamba activate phispy
 mamba install -c bioconda phispy
 ```
 
-## Identyfikacja profagów
+## Identyfikacja profagów i Analiza filogenetyczna
 
 GTDB-TK
 
 XXX
+
+Anti-Smash
+
+https://antismash.secondarymetabolites.org/#!/start
 
 PhiSpy
 
