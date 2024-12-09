@@ -46,7 +46,15 @@ mamba install -c bioconda phispy
 GTDB-TK
 
 ```bash
-gtdbtk identify --genome_dir SCIEZKA_DO_GENOMU --out_dir identyfy_out --cpus 4
+mkdir genomes/
+```
+
+```bash
+cp GENOM_ZESPADESA genomes/
+```
+
+```bash
+gtdbtk identify --genome_dir genomes/  --out_dir identyfy_out --extension fasta  --cpus 4
 ```
 
 ```bash
