@@ -54,7 +54,7 @@ cp GENOM_ZESPADESA genomes/
 ```
 
 ```bash
-gtdbtk identify --genome_dir genomes/  --out_dir identyfy_out --extension fasta  --cpus 4
+gtdbtk identify --genome_dir genomes/  --out_dir identyfy_out --extension fasta  --cpus 3
 ```
 
 ```bash
@@ -62,7 +62,7 @@ gtdbtk align --identify_dir identyfy_out --out_dir align_out
 ```
 
 ```bash
-gtdbtk classify --extension fasta --genome_dir SCIEZKA_DO_GENOMU --align_dir align_out --out_dir classify_out --skip_ani_screen --cpus 4
+gtdbtk classify --extension fasta --genome_dir SCIEZKA_DO_GENOMU --align_dir align_out --out_dir classify_out --skip_ani_screen --cpus 3
 ```
 
 Anti-Smash
@@ -74,5 +74,5 @@ PhiSpy
 Będziemy potrzebować pliku w formacie `GenBank`, znajdziesz go w folderze z plikami wyjściowymi z programu `bakta` z rozszerzeniem `.gbff`
 
 ```bash
-PhiSpy.py TWÓJ_PLIK_GENBANK -o NAZWA_KATALOGU_WYJSCIOWEGO --threads 10 --color --output_choice 7
+PhiSpy.py TWÓJ_PLIK_GENBANK -o NAZWA_KATALOGU_WYJSCIOWEGO --threads 3 --color --output_choice 7
 ```
