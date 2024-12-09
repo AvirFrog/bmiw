@@ -26,8 +26,6 @@ Ustawianie ścieżki do pobranej wcześniej bazy danych
 mamba env config vars set GTDBTK_DATA_PATH="/home/jbarylski/mambaforge/envs/gtdb-tk/share/gtdbtk-2.4.0/db";
 ```
 
-`GTDBTK_DATA_PATH /home/jbarylski/mambaforge/envs/gtdb-tk/share/gtdbtk-2.4.0/db`
-
 Teraz musimy zrestartować środowisko
 ```bash
 mamba deactivate
@@ -35,6 +33,8 @@ mamba deactivate
 ```bash
 mamba activate gtdb-tk
 ```
+
+I możemy przejść do instalacji kolejnego programu :)
 
 ### PhiSpy
 
