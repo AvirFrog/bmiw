@@ -69,7 +69,7 @@ gtdbtk align --identify_dir identyfy_out --out_dir align_out
 ```
 
 ```bash
-gtdbtk classify --extension fasta --genome_dir SCIEZKA_DO_GENOMU --align_dir align_out --out_dir classify_out --skip_ani_screen --cpus 3
+gtdbtk classify --extension fasta --genome_dir genomes/ --align_dir align_out --out_dir classify_out --skip_ani_screen --cpus 3
 ```
 
 ### Anti-Smash
