@@ -48,7 +48,7 @@ mamba activate phispy
 mamba install -c bioconda phispy
 ```
 
-## Identyfikacja profagów i Analiza taksonomiczna
+## Analiza taksonomiczna, identyfikacja profagów, bioprospecting
 
 ### GTDB-TK
 
