@@ -19,9 +19,6 @@ mamba activate phispy
 ```bash
 mamba install -c bioconda phispy
 ```
-Phigaro
-
-XXX
 
 ## Identyfikacja profagów
 
@@ -36,7 +33,3 @@ Będziemy potrzebować pliku w formacie `GenBank`, znajdziesz go w folderze z pl
 ```bash
 PhiSpy.py TWÓJ_PLIK_GENBANK -o NAZWA_KATALOGU_WYJSCIOWEGO --threads 10 --color --output_choice 7
 ```
-
-Phigaro
-
-XXX
