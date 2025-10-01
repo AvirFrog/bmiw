@@ -91,7 +91,7 @@ Będziemy potrzebować pliku w formacie `GenBank`, znajdziesz go w folderze z pl
 ```bash
 PhiSpy.py TWÓJ_PLIK_GENBANK -o NAZWA_KATALOGU_WYJSCIOWEGO --threads 3 --output_choice 7
 ```
-
+*usuwamy?*
 ### Blastn/tblastx
 
 [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi)
