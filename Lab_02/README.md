@@ -1,7 +1,9 @@
 # Adnotacja genomu bakterii
 
 *https://www.ncbi.nlm.nih.gov/refseq/annotation_prok*
+
 *https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000927*
+
 *https://github.com/linsalrob/PhiSpy*
 
 Przeporwadź adnotację genomu dwoma metodami oraz porównanaj wyniki i wyszukaj geny o konkretnych funkcjach za pomocą własnego skryptu w **Pythonie**
