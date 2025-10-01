@@ -1,5 +1,7 @@
 # Składanie Genomu
 
+*wywalić fastp, logowanie na serwerer? backup?*
+
 Przeanalizuj i złóż [bibliotek z sekwencjonowania genomu Agreia sp. (bakteria)](https://www.ebi.ac.uk/ena/browser/view/PRJEB40363)
 
 ##  Instalacja Condy i Mamby
