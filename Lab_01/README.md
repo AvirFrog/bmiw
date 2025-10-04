@@ -1,7 +1,5 @@
 # Składanie Genomu
 
-*wywalić fastp, logowanie na serwerer? backup?*
-
 Przeanalizuj i złóż [bibliotek z sekwencjonowania genomu Agreia sp. (bakteria)](https://www.ebi.ac.uk/ena/browser/view/PRJEB40363)
 
 ##  Instalacja Condy i Mamby
@@ -45,11 +43,6 @@ mamba env list
 ```
 
 ## Instalacja niezbędnych programów
-
-FastQC (narzędzie do kontroli jakości odczytów Illumina)
-```bash
-mamba install bioconda::fastqc
-```
 
 FastP (narzędzie do kontroli jakości, filtrowania i przycinania odczytów Illumina)
 ```bash
