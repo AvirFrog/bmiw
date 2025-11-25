@@ -1,6 +1,12 @@
 # Składanie Genomu
 
-Przeanalizuj i złóż [bibliotek z sekwencjonowania genomu Agreia sp. (bakteria)](https://www.ebi.ac.uk/ena/browser/view/PRJEB40363)
+Jeśli z jakiegoś powodu w twoim katalogu domowym nie ma katalogu `dane` to pobierz je ręcznie (to którą bakterie bedziesz analizować dowiesz się na zajęciach)
+
+[1. Agreia sp.](https://www.ebi.ac.uk/ena/browser/view/PRJEB40363)
+
+[2. XXX](www.google.pl)
+
+[3. XXX](www.google.pl)
 
 ##  Instalacja Condy i Mamby
 
@@ -25,11 +31,11 @@ conda config --add channels bioconda
 ```
 ## Tworzenie wirtualnych środowisk
 
---> `Dobrą praktyką (i bezpieczną) jest tworzenie osobnego środowiska do każdego narzędzia, ale jest to wymagane tylko dla niektórych programów.` <--
+> Dobrą praktyką (i bezpieczną) jest tworzenie osobnego środowiska do każdego narzędzia, ale jest to wymagane tylko dla niektórych programów.
 
 Tworzenie witrualnego środowiska
 ```bash
-mamba create -n env_name
+mamba create -n NAZWA_SRODOWISKA
 ```
 
 Aktywowanie utworzonego wirtualnego środowiska
@@ -44,55 +50,44 @@ mamba env list
 
 ## Instalacja niezbędnych programów
 
-FastP (narzędzie do kontroli jakości, filtrowania i przycinania odczytów Illumina)
-```bash
-mamba install bioconda::fastp
-```
+Do instalacji programów przyda się poniższa komenda gdzie `NAZWA_PROGRAMU` powinna zostać zastąpiona nazwą instalowanego programu. Polecam sprawdzić jak dokładnie sie program nazywa (czasem podczas instalacji podajemy delikatnie inną nazwę niż tą, którą program posiada) wpisując w przeglądarkę "`NAZWA_PROGRAMU` conda installation". 
 
-NanoPlot (narzędzie do kontroli jakości odczytów NanoPore)
-```bash
-mamba install bioconda::nanoplot
-```
-
-Porechop (narzędzie do usuwania adaptorów z NanoPore)
-```bash
-mamba install bioconda::porechop
-```
-
-Filtlong (narzędzie do filtrowania odczytów NanoPore)
-```bash
-mamba install bioconda::filtlong
-```
-
-spades (uniwersalny program do składania odzytów Illumina i bibliotek mieszanych - np. Illimina i Nanopore)
-```bash
-mamba install bioconda::spades
-```
-
-MegaHit (program do składania odzytów Illumina)
-```bash
-mamba install bioconda::megahit
-```
-
-Quast (narzędzie do kontroli jakości złożenia)
-```bash
-mamba install bioconda::quast
-```
-
-
---> `Quasta najlepiej dodac do nowego środowiska` <--
-
-## Pobieranie danych
-
-[biblioteka z sekwencjonowania genomu Agreia sp. (bakteria)](https://www.ebi.ac.uk/ena/browser/view/PRJEB40363)
-
-Prościej może być jak ręczne pobierzemy danych i przerzucimy je na serwer za pomocą WinSCP
-
-lub jeśli ktoś chce używać SCP w linuxie to przyda się ta komenda:
+My zamiast `condy` użyjemy `mamby` bo jest szybsza i lepsza. 
 
 ```bash
-scp *.fastq.gz {myuser}@IP_SERWERA_PODANE_NA_TEAMS:/path/to/dir
+mamba install bioconda::NAZWA_PROGRAMU
 ```
+
+### Lista programów do zainstalowania
+
+> Jeśli zainstalujecie wszystkie na początku będzie prościej w dalszej cześci zajęć ;)
+
+- FastP (narzędzie do kontroli jakości, filtrowania i przycinania odczytów Illumina)
+- NanoPlot (narzędzie do kontroli jakości odczytów NanoPore)
+- Porechop (narzędzie do usuwania adaptorów z NanoPore)
+- Filtlong (narzędzie do filtrowania odczytów NanoPore)
+- Spades (uniwersalny program do składania odzytów Illumina i bibliotek mieszanych - np. Illimina i Nanopore)
+- MegaHit (program do składania odzytów Illumina)
+- Quast (narzędzie do kontroli jakości złożenia)
+- MultiQC (narzedzie do łączenia kilku raportów w jeden)
+
+> Quasta najlepiej dodac do nowego środowiska
+
+## Zadanie 1
+
+Napisz skrypt w pythonie, który:
+
+- Policzy całkowitą ilość odczytów w próbkach 
+- Policzy całkowitą liczbę nukleotydów w próbkach
+- Obliczy średnią/mediane długości odczytów w próbkach
+- Poda najkrótszy i najdłuższy odczyt
+
+Opcjonalne funkcje:
+
+- Obliczy średnią zawartość %GC
+- Wygeneruje histogram przedstawiający rozkład długości odczytów
+
+Skrypt należy wrzucić na swojego githuba (repozytorium np. bmiw, katalog Lab_01), dodatkowo jeśli zdecydujesz się na zrobienie histogramu to również wrzuć go na github. Link do githuba prześlijw formularzu, wraz z odpowiedziami na pytania, które uzyskasz dzięki skryptowi.
 
 ## Kontrola jakości Illuminy i trimmowanie
 
