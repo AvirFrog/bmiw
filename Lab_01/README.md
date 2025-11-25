@@ -122,7 +122,7 @@ Jeśli mamy `Running` to znaczy że nasze zadanie dalej jest w trakcie pracy, je
 NanoPlot
   
 - liczba wątków 5
-- X
+- metryka N50
 - plik
 - output
 
@@ -141,7 +141,7 @@ Filtlong
 
 Nanoplot po filtracji
 - liczba wątków 5
-- X
+- metryka N50
 - plik
 - output
 
@@ -152,8 +152,7 @@ Nanoplot po filtracji
 Spades
 
 - liczba wątków 5
-- X
-- X
+- automatyczny próg coverage cutoff
 - plik_1_illumina
 - plik_2_illumina
 - plik_nanopore
@@ -165,7 +164,7 @@ MegaHit
 - plik_2_illumina
 - output
 - liczba wątków 5
-- m?
+- m 0.5
 
 ## Porównanie wyników z Spadesa i MegaHita za pomocą Quasta
 
