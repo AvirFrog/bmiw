@@ -1,4 +1,7 @@
-# Adnotacja genomu bakterii
+# JEŚLI TO CZYTASZ TO ZNACZY ŻE JEST TO NIEAKTUALNE, POCZEKAJ NA ODPOWIEDNIE ZAJĘCIA :D
+
+
+## Adnotacja genomu bakterii
 
 *https://www.ncbi.nlm.nih.gov/refseq/annotation_prok*
 
