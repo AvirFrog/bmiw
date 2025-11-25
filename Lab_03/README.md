@@ -1,4 +1,6 @@
-# Analiza taksonomiczna, identyfikacja profagów, bioprospecting
+# JEŚLI TO CZYTASZ TO ZNACZY ŻE JEST TO NIEAKTUALNE, POCZEKAJ NA ODPOWIEDNIE ZAJĘCIA :D
+
+## Analiza taksonomiczna, identyfikacja profagów, bioprospecting
 
 Zidentyfikuj do jakich taksonów(gantunku/rodzaju/rodziny) należy analizowana przez Ciebie bakteria, zidentyfikuj występujące w niej profagi i klastry genów pozwalające na syntezę metabolitów wtórnych. 
 
