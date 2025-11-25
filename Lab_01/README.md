@@ -89,7 +89,31 @@ Opcjonalne funkcje:
 
 Skrypt należy wrzucić na swojego githuba (repozytorium np. bmiw, katalog Lab_01), dodatkowo jeśli zdecydujesz się na zrobienie histogramu to również wrzuć go na github. Link do githuba prześlijw formularzu, wraz z odpowiedziami na pytania, które uzyskasz dzięki skryptowi.
 
+## Używanie nohup
+
+Czasami będziemy chcieli coś puścić w tle (np. składanie genomu, ponieważ trochę czasu to zajmuje a zajęcia zbliżają się ku końcowi), możemy wykorzystać dwa narzedzia `screen` oraz `nohup`, w tym przypadku `nohup` wydaje się być prostszy do wytłumaczenia i zastosowania.
+
+Poniżej jak wyglada przykładowa komenda `nohup`
+
+```bash
+nohup [nasza_komenda] > output.log 2> &1 &
+```
+
+- `nohup` - komenda za pomocą, której uruchomimy coś w tle
+- `[nasza_komenda]` - tu wklejamy nasze polecenie, które chcemy wykonać
+- `> output.log` - możemy nazwać output jak chcemy, jest  to przekierowanie informacji z standard outputu do pliku
+- `2> &1` - jest to przekierowania standard error do pliku który podalismy wcześniej (alternatywnie możemy zrobić tak `> stdr_out.txt 2> stdr_err.txt` i wtedy standard output i error mamy w osobnych plikach)
+- `&` - końcowy ampersant jest niezbędny do uruchomienia polecenia nohup
+
+żeby sprawdzić czy nasz skrypt działa uzywamy komendy
+```bash
+jobs
+```
+Jeśli mamy `Running` to znaczy że nasze zadanie dalej jest w trakcie pracy, jeśli mamy `Done` znaczy ze zadanie sie wykonało a jeśli jest `Exit` lub `Terminated` to znaczy że coś poszło nie tak i należy sprawdzić nasz plik z outputem/z standard errorem
+
 ## Kontrola jakości Illuminy i trimmowanie
+
+> Pamietajcie by używać tyle wątków ile domyślnie podałem w poleceniu ze względu na ograniczenia obliczeniowe serwera
 
 FastP  
 ```bash
@@ -119,30 +143,9 @@ Nanoplot po filtracji
 NanoPlot -t 5 --N50 --fastq filtered_nanopore.fastq -o postfilter_nanoplot
 ```
 
-## Używanie nohup
-
-Czasami zdazy się taka sytacja że będziemy chcieli coś puścić w tle (np. składanie genomu, ponieważ trochę czasu to zajmuje a zajęcia zbliżają się ku końcowi), możemy wykorzystać dwa narzedzia `screen` oraz `nohup`, w tym przypadku `nohup` wydaje się być prostszy do wytłumaczenia i zastosowania.
-
-Poniżej jak wyglada przykładowa komenda `nohup`
-
-```bash
-nohup [nasza_komenda] > output.log 2> &1 &
-```
-
-- `nohup` - komenda za pomocą, której uruchomimy coś w tle
-- `[nasza_komenda]` - tu wklejamy nasze polecenie, które chcemy wykonać
-- `> output.log` - możemy nazwać output jak chcemy, jest  to przekierowanie informacji z standard outputu do pliku
-- `2> &1` - jest to przekierowania standard error do pliku który podalismy wcześniej (alternatywnie możemy zrobić tak `> stdr_out.txt 2> stdr_err.txt` i wtedy standard output i error mamy w osobnych plikach)
-- `&` - końcowy ampersant jest niezbędny do uruchomienia polecenia nohup
-
-żeby sprawdzić czy nasz skrypt działa uzywamy komendy
-```bash
-jobs
-```
-Jeśli mamy `Running` to znaczy że nasze zadanie dalej jest w trakcie pracy, jeśli mamy `Done` znaczy ze zadanie sie wykonało a jeśli jest `Exit` lub `Terminated` to znaczy że coś poszło nie tak i należy sprawdzić nasz plik z outputem/z standard errorem
-
-
 ## Składanie genomu za pomocą SPADES i MegaHIT
+
+> Tutaj zdecydowanie używajcie podanej liczby wątków w poleceniu, przecież nie chcemy zapchać serwera prawda?
 
 Spades
 ```bash
@@ -160,3 +163,7 @@ Quast
 ```bash
 quast ./spades_assembly/scaffolds.fasta ./megahit_output/final.contigs.fa -o quast_comparision
 ```
+
+## Porównanie wyników w MultiQC
+
+Tutaj powinniście wymienić się raportami z poszczególnych wcześniejszych kroków i (w obrębie narzędzia) porównać ze sobą wyniki, jak różnią się w obrębie badanych bakterii.
