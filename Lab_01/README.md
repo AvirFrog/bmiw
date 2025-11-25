@@ -1,13 +1,5 @@
 # Składanie Genomu
 
-Jeśli z jakiegoś powodu w twoim katalogu domowym nie ma katalogu `dane` to pobierz je ręcznie (to którą bakterie bedziesz analizować dowiesz się na zajęciach)
-
-[1. Agreia sp.](https://www.ebi.ac.uk/ena/browser/view/PRJEB40363)
-
-[2. XXX](www.google.pl)
-
-[3. XXX](www.google.pl)
-
 ##  Instalacja Condy i Mamby
 
 Pobieranie miniforge
@@ -77,10 +69,9 @@ mamba install bioconda::NAZWA_PROGRAMU
 
 Napisz skrypt w pythonie, który:
 
-- Policzy całkowitą ilość odczytów w próbkach 
-- Policzy całkowitą liczbę nukleotydów w próbkach
-- Obliczy średnią/mediane długości odczytów w próbkach
-- Poda najkrótszy i najdłuższy odczyt
+- Policzy całkowitą ilość odczytów w bibliotece Illuminy
+- Policzy całkowitą liczbę nukleotydów w bibliotece NanoPore
+- Obliczy średnią/mediane długości odczytów w bibliotece NanoPore
 
 Opcjonalne funkcje:
 
@@ -115,54 +106,74 @@ Jeśli mamy `Running` to znaczy że nasze zadanie dalej jest w trakcie pracy, je
 
 > Pamietajcie by używać tyle wątków ile domyślnie podałem w poleceniu ze względu na ograniczenia obliczeniowe serwera
 
-FastP  
-```bash
-fastp -i PLIK_DO_ANALIZY_1.fastq.gz -I PLIK_DO_ANALIZY_2.fastq.gz -o output_1_trimmed.fastq.gz -O output_2_trimmed.fastq.gz --cut_front --cut_tail --cut_window_size 4 --cut_mean_quality 30 --length_required 50
-```
+### FastP  
+
+- plik_1
+- plik_2
+- output_1
+- output_2
+- filtrowanie początku i końca sekwencji
+- rozmiar okna filtrowania
+- srednia jakość filtrowania
+- minimalna długość pozostawionych odczytów
 
 ## Kontrola jakości Nanopore
 
 NanoPlot
   
-```bash
-NanoPlot -t 5 --N50 --fastq PLIK_DO_ANALIZY.fastq.gz -o prefilter_nanoplot
-```
+- liczba wątków 5
+- X
+- plik
+- output
 
 porechop
-```bash
-porechop -t 5 -i PLIK_DO_ANALIZY.fastq.gz -o prefiltered_nanopore.fastq
-```
+
+- liczba wątków 5
+- plik
+- output
 
 Filtlong
-```bash
-filtlong --min_mean_q 90 --min_length 1000 prefiltered_nanopore.fastq > filtered_nanopore.fastq
-```
+
+- średnia jakość
+- średnia długość
+- plik
+- output
 
 Nanoplot po filtracji
-```bash
-NanoPlot -t 5 --N50 --fastq filtered_nanopore.fastq -o postfilter_nanoplot
-```
+- liczba wątków 5
+- X
+- plik
+- output
 
 ## Składanie genomu za pomocą SPADES i MegaHIT
 
 > Tutaj zdecydowanie używajcie podanej liczby wątków w poleceniu, przecież nie chcemy zapchać serwera prawda?
 
 Spades
-```bash
-spades.py -t 5 --cov-cutoff auto --pe1-1 PLIK_DO_ANALIZY_illumina_trimmed_1.fastq.gz --pe1-2 PLIK_DO_ANALIZY_illumina_trimmed_2.fastq.gz --nanopore PLIK_DO_ANALIZY_filtered_nanopore.fastq -o spades_assembly
-```
+
+- liczba wątków 5
+- X
+- X
+- plik_1_illumina
+- plik_2_illumina
+- plik_nanopore
+- output
 
 MegaHit
-```bash
-megahit -1 PLIK_DO_ANALIZY_illumina_trimmed_1.fastq.gz -2 PLIK_DO_ANALIZY_illumina_trimmed_2.fastq.gz -o megahit_output -t 5 -m 0.5
-```
+
+- plik_1_illumina
+- plik_2_illumina
+- output
+- liczba wątków 5
+- m?
 
 ## Porównanie wyników z Spadesa i MegaHita za pomocą Quasta
 
 Quast
-```bash
-quast ./spades_assembly/scaffolds.fasta ./megahit_output/final.contigs.fa -o quast_comparision
-```
+
+- złożenie spades
+- złożenie megahit
+- output
 
 ## Porównanie wyników w MultiQC
 
