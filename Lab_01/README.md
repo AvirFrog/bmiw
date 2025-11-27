@@ -117,6 +117,10 @@ Jeśli mamy `Running` to znaczy że nasze zadanie dalej jest w trakcie pracy, je
 - srednia jakość filtrowania
 - minimalna długość pozostawionych odczytów
 
+```bash
+fastp -i PLIK_DO_ANALIZY_1.fastq.gz -I PLIK_DO_ANALIZY_2.fastq.gz -o output_1_trimmed.fastq.gz -O output_2_trimmed.fastq.gz --cut_front --cut_tail --cut_window_size 4 --cut_mean_quality 30 --length_required 50
+```
+
 ## Kontrola jakości Nanopore
 
 NanoPlot
