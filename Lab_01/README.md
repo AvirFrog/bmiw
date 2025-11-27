@@ -16,7 +16,9 @@ chmod +x Mambaforge-24.9.2-0-Linux-x86_64.sh
 ./Mambaforge-24.9.2-0-Linux-x86_64.sh
 ```
 
+```text
 Teraz należy się przelogować
+```
 
 ```bash
 conda config --add channels bioconda
