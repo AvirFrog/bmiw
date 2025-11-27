@@ -2,7 +2,7 @@
 
 ## Cel zajęć 🎯
 
-W ramach pierwszych ćwiczeń (**Lab_01**) przeanalizujemy oraz złożymy trzy genomy bakterii [X1], [X2], [X3], których genomy znajdziesz je w swoim katalogu domowym na serwerze (ip, login oraz hasło podane na teams). 
+W ramach pierwszych ćwiczeń (**Lab_01**) przeanalizujemy oraz złożymy trzy genomy bakterii `A`, `B`, `C`, których genomy znajdziesz je w swoim katalogu domowym na serwerze (ip, login oraz hasło podane na teams). 
 
 Następnym krokiem (**Lab_02**) będzie przeprowadzenie adnotacji genomów oraz porównanie wyników pomiędzy poszczególnymi bakteriiami. 
 
