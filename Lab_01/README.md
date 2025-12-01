@@ -9,7 +9,7 @@ wget https://github.com/conda-forge/miniforge/releases/download/25.9.1-0/Minifor
 ```
 
 ```bash
-chmod +x Mambaforge-24.9.2-0-Linux-x86_64.sh
+chmod +x Miniforge3-25.9.1-0-Linux-x86_64.sh 
 ```
 
 ```bash
