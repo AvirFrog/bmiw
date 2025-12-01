@@ -104,6 +104,17 @@ jobs
 ```
 Jeśli mamy `Running` to znaczy że nasze zadanie dalej jest w trakcie pracy, jeśli mamy `Done` znaczy ze zadanie sie wykonało a jeśli jest `Exit` lub `Terminated` to znaczy że coś poszło nie tak i należy sprawdzić nasz plik z outputem/z standard errorem
 
+Czasami będziemy chcieli zabić proces i można to zrobić tak:
+
+Po numerze zadania (np. [1]):
+```bash
+kill %1
+```
+lub:
+```bash
+kill -9 %1
+```
+
 ## Kontrola jakości Illuminy i trimmowanie
 
 > Pamietajcie by używać tyle wątków ile domyślnie podałem w poleceniu ze względu na ograniczenia obliczeniowe serwera
@@ -167,11 +178,11 @@ Spades
 Polecam zainstalować `wersje 4.0.0`:
 
 ```bash
-conda create -n spades400
+mamba create -n spades400
 ```
 
 ```bash
-conda activate spades400
+mamba activate spades400
 ```
 
 ```bash
