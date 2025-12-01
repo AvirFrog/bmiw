@@ -13,7 +13,7 @@ chmod +x Miniforge3-25.9.1-0-Linux-x86_64.sh
 ```
 
 ```bash
-./Mambaforge-24.9.2-0-Linux-x86_64.sh
+./Miniforge3-25.9.1-0-Linux-x86_64.sh 
 ```
 
 ```text
