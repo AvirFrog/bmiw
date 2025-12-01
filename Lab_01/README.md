@@ -89,7 +89,7 @@ Czasami będziemy chcieli coś puścić w tle (np. składanie genomu, ponieważ 
 Poniżej jak wyglada przykładowa komenda `nohup`
 
 ```bash
-nohup [nasza_komenda] > output.log 2> &1 &
+nohup [nasza_komenda] > output.log 2>&1 &
 ```
 
 - `nohup` - komenda za pomocą, której uruchomimy coś w tle
