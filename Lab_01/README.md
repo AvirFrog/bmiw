@@ -60,7 +60,7 @@ mamba install bioconda::NAZWA_PROGRAMU
 - NanoPlot (narzędzie do kontroli jakości odczytów NanoPore)
 - Porechop (narzędzie do usuwania adaptorów z NanoPore)
 - Filtlong (narzędzie do filtrowania odczytów NanoPore)
-- Spades (uniwersalny program do składania odzytów Illumina i bibliotek mieszanych - np. Illimina i Nanopore)
+- Spades (uniwersalny program do składania odzytów Illumina i bibliotek mieszanych - np. Illimina i Nanopore) w wersji 4.0.0
 - MegaHit (program do składania odzytów Illumina)
 - Quast (narzędzie do kontroli jakości złożenia)
 - MultiQC (narzedzie do łączenia kilku raportów w jeden)
@@ -163,6 +163,20 @@ Spades
 - plik_2_illumina
 - plik_nanopore
 - output
+
+Polecam zainstalować `wersje 4.0.0`:
+
+```bash
+conda create -n spades400
+```
+
+```bash
+conda activate spades400
+```
+
+```bash
+mamba install bioconda::spades==4.0.0
+```
 
 MegaHit
 
