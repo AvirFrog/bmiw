@@ -9,27 +9,13 @@
 
 Przeporwadź adnotację genomu dwoma metodami oraz porównanaj wyniki i wyszukaj geny o konkretnych funkcjach za pomocą własnego skryptu w **Pythonie**
 
+### 
+
+Przeprowadź adnotację genomu narzędziem Bakta oraz XXX...
+
 ## Instalacja niezbędnych programów
 
-W razie problemów z programami Prokka lub Bakta można skorzystać z serwerów galaxy, na których znajdują się te narzędzia: https://usegalaxy.org / https://annotation.usegalaxy.eu
-
-Prokka (nieco starszy leczpowszechnie używany zestaw do adnotacji pozycji i funkcji genów)
-
-```bash
-mamba create -n prokka
-```
-```bash
-mamba activate prokka
-```
-```bash
-mamba install bioconda::blast=2.2.31
-```
-```bash
-mamba install bioconda::prokka
-```
-```bash
-prokka --setupdb
-```
+W razie problemów z programem Bakta można skorzystać z serwerów galaxy, na których znajdują się te narzędzia: https://usegalaxy.org / https://annotation.usegalaxy.eu
 
 Bakta (nowoczesny zestaw do wystandaryzowanej adnotacji pozycji i funkcji genów u bakterii)
 ```bash
@@ -75,12 +61,6 @@ $ bakta_db download --output bakta_db --type full #tego nie puszczać na serwerz
 
 ## Adnotacja funkcjonalna sekwencji
 
-Prokka (nieco starszy leczpowszechnie używany zestaw do adnotacji pozycji i funkcji genów)
-```bash
-prokka --outdir prokka_output --prefix assembly --genus NAZWA_BAKTERII --kingdom Bacteria PLIK_FASTA_ZE_ZŁOZENIA --addgenes
-```
-lub https://usegalaxy.org / https://annotation.usegalaxy.eu 
-
 Bakta (nowoczesny zestaw do wystandaryzowanej adnotacji pozycji i funkcji genów u bakterii)
 ```bash
 amrfinder_update --force_update --database bakta_db/db-light/amrfinderplus-db/
@@ -92,9 +72,6 @@ bakta --db bakta_db/db-light --verbose --output results_bakta/ --prefix assembly
 lub https://usegalaxy.org / https://annotation.usegalaxy.eu 
 `Konieczne jest wybranie genomu, i wersji bazy AMRFinderPlus`
 
-## Porównanie wyników adnotacji uzyskanych różnymi metodami i analiza wybranych rodzin genowych
+## Zadanie 2
 
-*dodać szczegółową instrukcję pisania skryptu*
-
-Samodzielnie napisz skrypt, który porównuje ilość i średnią długość genów w obu adnotacjach i wyodrębni z genomu geny kodujące polimerazy RNA i DNA (np korzystając z biblioteki SeqIO pakietu biopython).
-Porównujemy pliki `.gbff` z `bakta` i `.gbk` z `prokka`.
+Napisz skrypt w pythonie, który wypiszę ilość oraz średnią długość genów w adnotacji ora wyodrębni z genomu geny kodujące polimerazy RNA i DNA (np korzystając z biblioteki SeqIO pakietu biopython).
