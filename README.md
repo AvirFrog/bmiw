@@ -14,7 +14,7 @@ Na zajęciach trzecich (**Lab_03**) zidentyfikujemy profagi których fragmenty z
 | Nr Zajęć | Temat  | Link  |
 |:---:|:---:|:---:|
 | 01. | Składanie genomu bakterii | [Lab_01](https://github.com/AvirFrog/bmiw/blob/main/Lab_01/README.md) |
-| 02. | Adnotacja genomu bakterii | [Lab_02](https://www.youtube.com/watch?v=dQw4w9WgXcQ) |
+| 02. | Adnotacja genomu bakterii | [Lab_02](https://github.com/AvirFrog/bmiw/blob/main/Lab_02/README.md) |
 | 03. | Identyfikacja profagów | [Lab_03](https://www.youtube.com/watch?v=dQw4w9WgXcQ) |
 
 Jeśli masz pytanie (po za zajęciami) to polecam kontkatować się przez maila kacper.dudczak@amu.edu.pl lub na Teams
