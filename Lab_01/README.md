@@ -62,6 +62,8 @@ mamba install bioconda::NAZWA_PROGRAMU
 - Filtlong (narzędzie do filtrowania odczytów NanoPore)
 - Spades (uniwersalny program do składania odzytów Illumina i bibliotek mieszanych - np. Illimina i Nanopore) w wersji 4.0.0
 - MegaHit (program do składania odzytów Illumina)
+- Flye (program do składania odczytów NanoPore)
+- NanoStat (szybkie statystyki NanoPore)
 - Quast (narzędzie do kontroli jakości złożenia)
 - MultiQC (narzedzie do łączenia kilku raportów w jeden)
 
@@ -197,12 +199,20 @@ MegaHit
 - liczba wątków 5
 - m 0.5
 
+Flye + NanoStat
+
+Flye
+- tryb dla odpowiednich odczytów (tu sie przyda NanoStat)
+- out dir
+- threads max 3
+
 ## Porównanie wyników z Spadesa i MegaHita za pomocą Quasta
 
 Quast
 
 - złożenie spades
 - złożenie megahit
+- złożenie flye
 - output
 
 ## Porównanie wyników w MultiQC
