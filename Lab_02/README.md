@@ -45,4 +45,4 @@ lub https://usegalaxy.org / https://annotation.usegalaxy.eu
 
 ## Zadanie 2
 
-Napisz skrypt w pythonie, który wypiszę ilość oraz średnią długość genów w adnotacji ora wyodrębni z genomu geny kodujące polimerazy RNA i DNA (np korzystając z biblioteki SeqIO pakietu biopython).
+Napisz skrypt w pythonie, który porówna wyniki z bazy danych w wersji `light` i `full`(szczegóły znajdziecie w raporcie).
