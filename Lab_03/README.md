@@ -74,18 +74,6 @@ gtdbtk align --identify_dir identyfy_out --out_dir align_out
 gtdbtk classify --extension fasta --genome_dir genomes/ --align_dir align_out --out_dir classify_out --skip_ani_screen --cpus 3
 ```
 
-### Anti-Smash
-
-Narzedzie do analizy klastrów biosyntezy metabolitów wtórnych (użyteczne przy poszukiwaniu genów dla biotechnologi - bioprospectingu)
-
-Plikiem wjeściowym będzie plik `.gbff` z programu `bakta`
-
-W sekcji `Extra features` zaznacz wszystko :)
-
-Podaj swojego maila (w Anti-SMASH) żeby nie "zgubić" wyników
-
-[Anti-SMASH](https://antismash.secondarymetabolites.org/#!/start)
-
 ### PhiSpy
 
 Będziemy potrzebować pliku w formacie `GenBank`, znajdziesz go w folderze z plikami wyjściowymi z programu `bakta` z rozszerzeniem `.gbff`
@@ -93,20 +81,5 @@ Będziemy potrzebować pliku w formacie `GenBank`, znajdziesz go w folderze z pl
 ```bash
 PhiSpy.py TWÓJ_PLIK_GENBANK -o NAZWA_KATALOGU_WYJSCIOWEGO --threads 3 --output_choice 7
 ```
-*usuwamy?*
-### Blastn/tblastx
 
-[BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi)
 
-Wybieramy `Nucleotide BLAST`
-
-`blastn`
-
-- W sekcji: `Enter Query Sequence` dodaj plik `phages.fasta` z programu `PhiSpy`
-- W sekcji: `Choose Search Set`: `Database` -> `refseq_genomes`, `Organism` -> `Viruses (taxid: 10239)`
-- W sekcji: `Program Selection` wybieramy `blastn`
-
-`tblastx`
-
-- W sekcji: `Enter Query Sequence` dodaj plik `phages.fasta` z programu `PhiSpy`, `Genetic code` -> `Bacteria and Archea`
-- W sekcji: `Choose Search Set`: `Database` -> `refseq_genomes`, `Organism` -> `Viruses (taxid: 10239)`
