@@ -2,7 +2,7 @@
 
 ## Analiza taksonomiczna, identyfikacja profagów, bioprospecting
 
-Zidentyfikuj do jakich taksonów(gantunku/rodzaju/rodziny) należy analizowana przez Ciebie bakteria, zidentyfikuj występujące w niej profagi i klastry genów pozwalające na syntezę metabolitów wtórnych. 
+Zidentyfikuj do jakich taksonów(gantunku/rodzaju/rodziny) należy analizowana przez Ciebie bakteria, zidentyfikuj występujące w niej profagi.
 
 ## Instalacja niezbędnych programów
 
@@ -16,7 +16,7 @@ mamba activate gtdb-tk
 ```bash
 mamba install bioconda::gtdbtk
 ```
-Baza danych sciągała się ponad 2 dni dlatego skorzystamy z tej pobranej
+Baza danych sciągała się kilka godzin dlatego skorzystamy z tej pobranej
 
 UWAGA! TEJ KOMENDY NIE WYKONUJEMY 
 ```bash
@@ -25,7 +25,7 @@ $ download-db.sh #NIE URUCHAMIAĆ!
 Ustawianie ścieżki do pobranej wcześniej bazy danych
 
 ```bash
-mamba env config vars set GTDBTK_DATA_PATH="/home/jbarylski/mambaforge/envs/gtdb-tk/share/gtdbtk-2.4.0/db";
+mamba env config vars set GTDBTK_DATA_PATH="/home/database/miniforge3/envs/gtdb-tk/share/gtdbtk-2.5.2/db/;
 ```
 
 Teraz musimy zrestartować środowisko
