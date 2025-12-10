@@ -8,7 +8,7 @@ Zidentyfikuj do jakich taksonów(gantunku/rodzaju/rodziny) należy analizowana p
 
 ### GTDB-TK
 ```bash
-mamba create -n gtdb-tk
+mamba create -n gtdb-tk -c conda-forge -c bioconda gtdbtk=2.5.2 python=3.10
 ```
 ```bash
 mamba activate gtdb-tk
@@ -25,7 +25,7 @@ $ download-db.sh #NIE URUCHAMIAĆ!
 Ustawianie ścieżki do pobranej wcześniej bazy danych
 
 ```bash
-mamba env config vars set GTDBTK_DATA_PATH="/home/database/miniforge3/envs/gtdb-tk/share/gtdbtk-2.5.2/db/;
+export GTDBTK_DATA_PATH="/home/database/miniforge3/envs/gtdb-tk/share/gtdbtk-2.5.2/db/"
 ```
 
 Teraz musimy zrestartować środowisko
